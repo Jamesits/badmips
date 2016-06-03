@@ -2,9 +2,9 @@ Command line:
    cpu_test_isim_translate.exe
      -simmode  gui
      -simrunnum  0
-     -socket  45127
+     -socket  58099
 
-Fri Jun  3 23:18:41 2016
+Fri Jun  3 23:29:36 2016
 
 
- Elaboration Time: 1.55 sec
+ Elaboration Time: 1.6 sec

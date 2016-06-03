@@ -9,7 +9,7 @@
 // Design Name:   experiment
 // Module Name:   /home/james/code/FPGA-mips/exp8-r-instruction/cpu_test.v
 // Project Name:  exp8-r-instruction
-// Target Device:  
+// Target Device:  Nexys 3
 // Tool versions:  
 // Description: 
 //
@@ -52,35 +52,45 @@ module cpu_test;
 		.dbg_we(dbg_we),
 		.alu_output(alu_output)
 	);
+	
+	integer i;
 
 	initial begin
 		// Initialize Inputs
-		RST = 1;
+		RST = 0;
 		CLK = 0;
 		SEL = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-		RST = 0;
-        #100
+		
 		// Add stimulus here
-		CLK = 1;
-		#100;
-		CLK = 0;
-		#100;
-		CLK = 1;
-		#100;
-		CLK = 0;
-		#100;
-		CLK = 1;
-		#100;
-		CLK = 0;
-		#100;
-		CLK = 1;
-		#100;
-		CLK = 0;
-		#100;
+		for (i = 0; i < 35; i = i + 1) begin
+			CLK = 1;
+			#10;
+			CLK = 0;
+			#10;
+		end
+		RST = 1;
+		#10;
+		RST = 0;
+		#10;
+		for (i = 0; i < 5; i = i + 1) begin
+			CLK = 1;
+			#10;
+			CLK = 0;
+			#10;
+		end
+		RST = 1;
+		#10;
+		RST = 0;
+		#10;
+		for (i = 0; i < 12; i = i + 1) begin
+			CLK = 1;
+			#10;
+			CLK = 0;
+			#10;
+		end
 	end
-      
 endmodule
 
