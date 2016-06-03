@@ -24,7 +24,7 @@ WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/
 WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1986: Element index 3 into memp is out of bounds
 Completed static elaboration
 Fuse Memory Usage: 111896 KB
-Fuse CPU Usage: 5030 ms
+Fuse CPU Usage: 4970 ms
 Compiling module X_ONE
 Compiling module X_ZERO
 Compiling module latchsre
@@ -56,9 +56,8 @@ Compiling module experiment
 Compiling module cpu_test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 140 Verilog Units
 Built simulation executable /home/james/code/FPGA-mips/exp8-r-instruction/cpu_test_isim_translate.exe
 Fuse Memory Usage: 697020 KB
-Fuse CPU Usage: 7290 ms
-GCC CPU Usage: 21590 ms
+Fuse CPU Usage: 7180 ms
+GCC CPU Usage: 21400 ms

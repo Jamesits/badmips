@@ -42,16 +42,16 @@ always @(negedge CLK or posedge RST)
 begin
 	if (RST) PC <= 0;
 	else begin
-		PC <= PC + 1;
+		PC <= PC + 4;
 	end
 end
 
 wire [31:0]inst_code;
-wire [7:0] inst_addr;
+wire [5:0] inst_addr;
 
 assign dbg_inst = inst_code;
 
-assign inst_addr = PC[7:0];
+assign inst_addr = PC[7:2];
 
 inst_mem i(
 	.addra(inst_addr),

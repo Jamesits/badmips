@@ -7,7 +7,7 @@
 // \   \   \/     Version: P.20131013
 //  \   \         Application: netgen
 //  /   /         Filename: experiment_translate.v
-// /___/   /\     Timestamp: Fri Jun  3 23:18:07 2016
+// /___/   /\     Timestamp: Fri Jun  3 23:54:58 2016
 // \   \  /  \ 
 //  \___\/\___\
 //             
@@ -2035,10 +2035,10 @@ module experiment (
   wire \c/a/out1_3297 ;
   wire \c/a/out2_3298 ;
   wire \c/a/out3_3299 ;
-  wire \c/Mcount_PC_cy<1>_rt_3445 ;
-  wire \c/Mcount_PC_cy<2>_rt_3446 ;
-  wire \c/Mcount_PC_cy<3>_rt_3447 ;
-  wire \c/Mcount_PC_cy<4>_rt_3448 ;
+  wire \c/Maccum_PC_cy<3>_rt_3445 ;
+  wire \c/Maccum_PC_cy<4>_rt_3446 ;
+  wire \c/Maccum_PC_cy<5>_rt_3447 ;
+  wire \c/Maccum_PC_cy<6>_rt_3448 ;
   wire \c/a/Madd_n0034_lut<0>1_3449 ;
   wire N13;
   wire N15;
@@ -2220,10 +2220,10 @@ module experiment (
   wire \NLW_c/i/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_DIADI[1]_UNCONNECTED ;
   wire \NLW_c/i/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_DIADI[0]_UNCONNECTED ;
   wire [31 : 0] ALU_OUT;
-  wire [5 : 0] \c/PC ;
-  wire [5 : 0] Result;
-  wire [0 : 0] \c/Mcount_PC_lut ;
-  wire [4 : 0] \c/Mcount_PC_cy ;
+  wire [7 : 2] \c/PC ;
+  wire [7 : 2] Result;
+  wire [2 : 2] \c/Maccum_PC_lut ;
+  wire [6 : 2] \c/Maccum_PC_cy ;
   wire [991 : 0] \c/r/r_31 ;
   wire [31 : 0] \c/a/Msub_GND_9_o_GND_9_o_sub_7_OUT_cy ;
   wire [31 : 0] \c/a/Msub_GND_9_o_GND_9_o_sub_7_OUT_lut ;
@@ -2299,26 +2299,6 @@ module experiment (
   );
   X_FF #(
     .INIT ( 1'b0 ))
-  \c/PC_0  (
-    .CLK(CLK_inv),
-    .RST(RST_IBUF_80),
-    .I(Result[0]),
-    .O(\c/PC [0]),
-    .CE(VCC),
-    .SET(GND)
-  );
-  X_FF #(
-    .INIT ( 1'b0 ))
-  \c/PC_1  (
-    .CLK(CLK_inv),
-    .RST(RST_IBUF_80),
-    .I(Result[1]),
-    .O(\c/PC [1]),
-    .CE(VCC),
-    .SET(GND)
-  );
-  X_FF #(
-    .INIT ( 1'b0 ))
   \c/PC_2  (
     .CLK(CLK_inv),
     .RST(RST_IBUF_80),
@@ -2357,65 +2337,85 @@ module experiment (
     .CE(VCC),
     .SET(GND)
   );
-  X_MUX2   \c/Mcount_PC_cy<0>  (
+  X_FF #(
+    .INIT ( 1'b0 ))
+  \c/PC_6  (
+    .CLK(CLK_inv),
+    .RST(RST_IBUF_80),
+    .I(Result[6]),
+    .O(\c/PC [6]),
+    .CE(VCC),
+    .SET(GND)
+  );
+  X_FF #(
+    .INIT ( 1'b0 ))
+  \c/PC_7  (
+    .CLK(CLK_inv),
+    .RST(RST_IBUF_80),
+    .I(Result[7]),
+    .O(\c/PC [7]),
+    .CE(VCC),
+    .SET(GND)
+  );
+  X_MUX2   \c/Maccum_PC_cy<2>  (
     .IB(N1),
     .IA(N0),
-    .SEL(\c/Mcount_PC_lut [0]),
-    .O(\c/Mcount_PC_cy [0])
+    .SEL(\c/Maccum_PC_lut [2]),
+    .O(\c/Maccum_PC_cy [2])
   );
-  X_XOR2   \c/Mcount_PC_xor<0>  (
+  X_XOR2   \c/Maccum_PC_xor<2>  (
     .I0(N1),
-    .I1(\c/Mcount_PC_lut [0]),
-    .O(Result[0])
-  );
-  X_MUX2   \c/Mcount_PC_cy<1>  (
-    .IB(\c/Mcount_PC_cy [0]),
-    .IA(N1),
-    .SEL(\c/Mcount_PC_cy<1>_rt_3445 ),
-    .O(\c/Mcount_PC_cy [1])
-  );
-  X_XOR2   \c/Mcount_PC_xor<1>  (
-    .I0(\c/Mcount_PC_cy [0]),
-    .I1(\c/Mcount_PC_cy<1>_rt_3445 ),
-    .O(Result[1])
-  );
-  X_MUX2   \c/Mcount_PC_cy<2>  (
-    .IB(\c/Mcount_PC_cy [1]),
-    .IA(N1),
-    .SEL(\c/Mcount_PC_cy<2>_rt_3446 ),
-    .O(\c/Mcount_PC_cy [2])
-  );
-  X_XOR2   \c/Mcount_PC_xor<2>  (
-    .I0(\c/Mcount_PC_cy [1]),
-    .I1(\c/Mcount_PC_cy<2>_rt_3446 ),
+    .I1(\c/Maccum_PC_lut [2]),
     .O(Result[2])
   );
-  X_MUX2   \c/Mcount_PC_cy<3>  (
-    .IB(\c/Mcount_PC_cy [2]),
+  X_MUX2   \c/Maccum_PC_cy<3>  (
+    .IB(\c/Maccum_PC_cy [2]),
     .IA(N1),
-    .SEL(\c/Mcount_PC_cy<3>_rt_3447 ),
-    .O(\c/Mcount_PC_cy [3])
+    .SEL(\c/Maccum_PC_cy<3>_rt_3445 ),
+    .O(\c/Maccum_PC_cy [3])
   );
-  X_XOR2   \c/Mcount_PC_xor<3>  (
-    .I0(\c/Mcount_PC_cy [2]),
-    .I1(\c/Mcount_PC_cy<3>_rt_3447 ),
+  X_XOR2   \c/Maccum_PC_xor<3>  (
+    .I0(\c/Maccum_PC_cy [2]),
+    .I1(\c/Maccum_PC_cy<3>_rt_3445 ),
     .O(Result[3])
   );
-  X_MUX2   \c/Mcount_PC_cy<4>  (
-    .IB(\c/Mcount_PC_cy [3]),
+  X_MUX2   \c/Maccum_PC_cy<4>  (
+    .IB(\c/Maccum_PC_cy [3]),
     .IA(N1),
-    .SEL(\c/Mcount_PC_cy<4>_rt_3448 ),
-    .O(\c/Mcount_PC_cy [4])
+    .SEL(\c/Maccum_PC_cy<4>_rt_3446 ),
+    .O(\c/Maccum_PC_cy [4])
   );
-  X_XOR2   \c/Mcount_PC_xor<4>  (
-    .I0(\c/Mcount_PC_cy [3]),
-    .I1(\c/Mcount_PC_cy<4>_rt_3448 ),
+  X_XOR2   \c/Maccum_PC_xor<4>  (
+    .I0(\c/Maccum_PC_cy [3]),
+    .I1(\c/Maccum_PC_cy<4>_rt_3446 ),
     .O(Result[4])
   );
-  X_XOR2   \c/Mcount_PC_xor<5>  (
-    .I0(\c/Mcount_PC_cy [4]),
-    .I1(\c/PC [5]),
+  X_MUX2   \c/Maccum_PC_cy<5>  (
+    .IB(\c/Maccum_PC_cy [4]),
+    .IA(N1),
+    .SEL(\c/Maccum_PC_cy<5>_rt_3447 ),
+    .O(\c/Maccum_PC_cy [5])
+  );
+  X_XOR2   \c/Maccum_PC_xor<5>  (
+    .I0(\c/Maccum_PC_cy [4]),
+    .I1(\c/Maccum_PC_cy<5>_rt_3447 ),
     .O(Result[5])
+  );
+  X_MUX2   \c/Maccum_PC_cy<6>  (
+    .IB(\c/Maccum_PC_cy [5]),
+    .IA(N1),
+    .SEL(\c/Maccum_PC_cy<6>_rt_3448 ),
+    .O(\c/Maccum_PC_cy [6])
+  );
+  X_XOR2   \c/Maccum_PC_xor<6>  (
+    .I0(\c/Maccum_PC_cy [5]),
+    .I1(\c/Maccum_PC_cy<6>_rt_3448 ),
+    .O(Result[6])
+  );
+  X_XOR2   \c/Maccum_PC_xor<7>  (
+    .I0(\c/Maccum_PC_cy [6]),
+    .I1(\c/PC [7]),
+    .O(Result[7])
   );
   X_LUT6 #(
     .INIT ( 64'hF0F0FF00CCCCAAAA ))
@@ -22846,30 +22846,30 @@ module experiment (
   );
   X_LUT2 #(
     .INIT ( 4'hA ))
-  \c/Mcount_PC_cy<1>_rt  (
-    .ADR0(\c/PC [1]),
-    .O(\c/Mcount_PC_cy<1>_rt_3445 ),
-    .ADR1(GND)
-  );
-  X_LUT2 #(
-    .INIT ( 4'hA ))
-  \c/Mcount_PC_cy<2>_rt  (
-    .ADR0(\c/PC [2]),
-    .O(\c/Mcount_PC_cy<2>_rt_3446 ),
-    .ADR1(GND)
-  );
-  X_LUT2 #(
-    .INIT ( 4'hA ))
-  \c/Mcount_PC_cy<3>_rt  (
+  \c/Maccum_PC_cy<3>_rt  (
     .ADR0(\c/PC [3]),
-    .O(\c/Mcount_PC_cy<3>_rt_3447 ),
+    .O(\c/Maccum_PC_cy<3>_rt_3445 ),
     .ADR1(GND)
   );
   X_LUT2 #(
     .INIT ( 4'hA ))
-  \c/Mcount_PC_cy<4>_rt  (
+  \c/Maccum_PC_cy<4>_rt  (
     .ADR0(\c/PC [4]),
-    .O(\c/Mcount_PC_cy<4>_rt_3448 ),
+    .O(\c/Maccum_PC_cy<4>_rt_3446 ),
+    .ADR1(GND)
+  );
+  X_LUT2 #(
+    .INIT ( 4'hA ))
+  \c/Maccum_PC_cy<5>_rt  (
+    .ADR0(\c/PC [5]),
+    .O(\c/Maccum_PC_cy<5>_rt_3447 ),
+    .ADR1(GND)
+  );
+  X_LUT2 #(
+    .INIT ( 4'hA ))
+  \c/Maccum_PC_cy<6>_rt  (
+    .ADR0(\c/PC [6]),
+    .O(\c/Maccum_PC_cy<6>_rt_3448 ),
     .ADR1(GND)
   );
   X_LUT2 #(
@@ -34244,9 +34244,9 @@ module experiment (
     .O(SEL_0_IBUF_BUFG_79),
     .I(SEL_0_IBUF_3574)
   );
-  X_INV   \c/Mcount_PC_lut<0>_INV_0  (
-    .I(\c/PC [0]),
-    .O(\c/Mcount_PC_lut [0])
+  X_INV   \c/Maccum_PC_lut<2>_INV_0  (
+    .I(\c/PC [2]),
+    .O(\c/Maccum_PC_lut [2])
   );
   X_INV   CLK_inv1_INV_0 (
     .I(CLK_BUFGP),
@@ -34830,7 +34830,7 @@ dbg_inst_2_OBUF_143, dbg_inst_1_OBUF_144, dbg_inst_0_OBUF_145}),
     .WEBWEU({
 \NLW_c/i/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_WEBWEU[1]_UNCONNECTED , 
 \NLW_c/i/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_WEBWEU[0]_UNCONNECTED }),
-    .ADDRAWRADDR({\c/i/N1 , \c/i/N1 , \c/PC [5], \c/PC [4], \c/PC [3], \c/PC [2], \c/PC [1], \c/PC [0], \c/i/N1 , \c/i/N1 , \c/i/N1 , \c/i/N1 , 
+    .ADDRAWRADDR({\c/i/N1 , \c/i/N1 , \c/PC [7], \c/PC [6], \c/PC [5], \c/PC [4], \c/PC [3], \c/PC [2], \c/i/N1 , \c/i/N1 , \c/i/N1 , \c/i/N1 , 
 \c/i/N1 }),
     .DIPBDIP({\c/i/N1 , \c/i/N1 }),
     .DIBDI({
@@ -34867,7 +34867,7 @@ dbg_inst_2_OBUF_143, dbg_inst_1_OBUF_144, dbg_inst_0_OBUF_145}),
 \NLW_c/i/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_DIADI[2]_UNCONNECTED , 
 \NLW_c/i/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_DIADI[1]_UNCONNECTED , 
 \NLW_c/i/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_DIADI[0]_UNCONNECTED }),
-    .ADDRBRDADDR({\c/i/N1 , \c/i/N1 , \c/PC [5], \c/PC [4], \c/PC [3], \c/PC [2], \c/PC [1], \c/PC [0], \c/i/N0 , \c/i/N1 , \c/i/N1 , \c/i/N1 , 
+    .ADDRBRDADDR({\c/i/N1 , \c/i/N1 , \c/PC [7], \c/PC [6], \c/PC [5], \c/PC [4], \c/PC [3], \c/PC [2], \c/i/N0 , \c/i/N1 , \c/i/N1 , \c/i/N1 , 
 \c/i/N1 }),
     .DOBDO({dbg_inst_31_OBUF_114, dbg_inst_30_OBUF_115, dbg_inst_29_OBUF_116, dbg_inst_28_OBUF_117, dbg_inst_27_OBUF_118, dbg_inst_26_OBUF_119, 
 dbg_inst_25_OBUF_120, dbg_inst_24_OBUF_121, dbg_inst_23_OBUF_122, dbg_inst_22_OBUF_123, dbg_inst_21_OBUF_124, dbg_inst_20_OBUF_125, 
