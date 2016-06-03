@@ -1,6 +1,5 @@
 ISim log file
 Running: /home/james/code/FPGA-mips/exp8-r-instruction/cpu_test_isim_translate.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/james/code/FPGA-mips/exp8-r-instruction/cpu_test_isim_translate.wdb 
-INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
 Time resolution is 1 ps

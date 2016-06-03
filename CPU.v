@@ -34,6 +34,8 @@ module CPU(
 // IF
 reg [31:0] PC; // only last 8 bits are used
 
+initial PC = 0;
+
 always @(negedge CLK or posedge RST)
 begin
 	if (RST) PC <= 0;
@@ -65,11 +67,11 @@ wire [31:0]alu_input_A, alu_input_B;
 wire [31:0]alu_output;
 wire reg_write_enable;
 
-assign op = inst_code[5:0];
-assign rs = inst_code[10:6];
-assign rt = inst_code[15:11];
-assign rd = inst_code[20:16];
-assign func = inst_code[31:26];
+assign op = inst_code[31:26];
+assign rs = inst_code[25:21];
+assign rt = inst_code[20:16];
+assign rd = inst_code[15:11];
+assign func = inst_code[5:0];
 
 register r(
 	.R_Addr_A(rs),

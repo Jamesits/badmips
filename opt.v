@@ -28,7 +28,7 @@ module opt(
 
 always begin
 	if (!OP) begin
-	WE <= 1;
+		WE <= 1;
 		case (func)
 			//add
 			6'b100000: ALU_OP <= 3'b100;
@@ -40,6 +40,8 @@ always begin
 			6'b101011: ALU_OP <= 3'b110;
 			6'b000100: ALU_OP <= 3'b111;
 		endcase
+	end else begin
+		WE <= 0;
 	end
 end
 
