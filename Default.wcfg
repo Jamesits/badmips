@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="11" />
    <wvobject fp_name="/cpu_test/LED" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">LED[7:0]</obj_property>
       <obj_property name="ObjectShortName">LED[7:0]</obj_property>
@@ -23,14 +23,25 @@
    <wvobject fp_name="/cpu_test/dbg_a" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">dbg_a[31:0]</obj_property>
       <obj_property name="ObjectShortName">dbg_a[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/cpu_test/dbg_b" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">dbg_b[31:0]</obj_property>
       <obj_property name="ObjectShortName">dbg_b[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/cpu_test/dbg_op" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">dbg_op[2:0]</obj_property>
       <obj_property name="ObjectShortName">dbg_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_test/dbg_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dbg_we</obj_property>
+      <obj_property name="ObjectShortName">dbg_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_test/alu_output" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_output[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/cpu_test/RST" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">RST</obj_property>
@@ -43,5 +54,10 @@
    <wvobject fp_name="/cpu_test/SEL" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">SEL[2:0]</obj_property>
       <obj_property name="ObjectShortName">SEL[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_test/i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
