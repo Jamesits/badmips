@@ -42,7 +42,7 @@ always @(negedge CLK or posedge RST)
 begin
 	if (RST) PC <= 0;
 	else begin
-		PC <= PC + 4;
+		PC <= PC + 1;
 	end
 end
 
