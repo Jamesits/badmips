@@ -431,10 +431,10 @@ extern void simprims_ver_m_03252886117992735132_1529224445_init()
 	xsi_register_executes(pe);
 }
 
-extern void simprims_ver_m_03252886117992735132_1715877197_init()
+extern void simprims_ver_m_03252886117992735132_2124377659_init()
 {
 	static char *pe[] = {(void *)Gate_33_0,(void *)Gate_34_1,(void *)implSig1_execute,(void *)implSig2_execute,(void *)implSig3_execute,(void *)implSig4_execute};
-	xsi_register_didat("simprims_ver_m_03252886117992735132_1715877197", "isim/cpu_test_isim_translate.exe.sim/simprims_ver/m_03252886117992735132_1715877197.didat");
+	xsi_register_didat("simprims_ver_m_03252886117992735132_2124377659", "isim/cpu_test_isim_translate.exe.sim/simprims_ver/m_03252886117992735132_2124377659.didat");
 	xsi_register_executes(pe);
 }
 

@@ -24,8 +24,8 @@ module register(
     input wire [4:0] R_Addr_B,
     input wire [4:0] W_Addr,
     input wire [31:0] W_Data,
-    output reg [31:0] R_Data_A,
-    output reg [31:0] R_Data_B,
+    output wire [31:0] R_Data_A,
+    output wire [31:0] R_Data_B,
     input wire CLK,
     input wire RST,
     input wire WE
@@ -33,6 +33,9 @@ module register(
 
 // register
 reg [31:0] r [0:31];
+
+assign R_Data_A = r[R_Addr_A];
+assign R_Data_B = r[R_Addr_B];
 
 integer i;
 always @ (posedge RST or posedge CLK)
@@ -42,8 +45,6 @@ begin
 			r[i] <= 0;
 	end else begin
 		if (WE && W_Addr) r[W_Addr] <= W_Data;
-		R_Data_A <= r[R_Addr_A];
-		R_Data_B <= r[R_Addr_B];
 	end
 end
 

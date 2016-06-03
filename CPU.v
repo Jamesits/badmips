@@ -61,7 +61,7 @@ wire [4:0]rs;
 wire [4:0]rt;
 wire [4:0]rd;
 wire [5:0]func;
-wire [31:0]alu_input [0:1];
+wire [31:0]alu_input_A, alu_input_B;
 wire [31:0]alu_output;
 wire reg_write_enable;
 
@@ -75,8 +75,8 @@ register r(
 	.R_Addr_A(rs),
 	.R_Addr_B(rt),
 	.W_Addr(rd),
-	.R_Data_A(alu_input[0]),
-	.R_Data_B(alu_input[1]),
+	.R_Data_A(alu_input_A),
+	.R_Data_B(alu_input_B),
 	.W_Data(alu_output),
 	.CLK(~CLK),
 	.RST(RST),
@@ -96,8 +96,8 @@ opt o(
 
 ALU a(
 	.ALU_OP(alu_op),
-	.A(alu_input[0]),
-	.B(alu_input[1]),
+	.A(alu_input_A),
+	.B(alu_input_B),
 	.F(alu_output),
 	.OF(alu_of),
 	.ZF(alu_zf),
@@ -109,8 +109,8 @@ assign ALU_OUT = alu_output;
 assign ALU_OF = alu_of;
 assign ALU_ZF = alu_zf;
 
-assign dbg_a = alu_input[0];
-assign dbg_b = alu_input[1];
+assign dbg_a = alu_input_A;
+assign dbg_b = alu_input_B;
 assign dbg_op = alu_op;
 
 endmodule
