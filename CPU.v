@@ -43,9 +43,9 @@ wire [7:0] inst_addr;
 assign inst_addr = PC[7:0];
 
 inst_mem i(
-	.ADDRA(inst_addr),
-	.DOUTA(inst_code),
-	.CLKA(CLK)
+	.addra(inst_addr),
+	.douta(inst_code),
+	.clka(CLK)
 );
 
 // ID

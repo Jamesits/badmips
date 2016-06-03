@@ -30,9 +30,9 @@ module ALU(
 
 always begin
 	if (RST) begin
-		F <= 0;
-		ZF <= 0;
-		OF <= 0;
+		F = 0;
+		ZF = 0;
+		OF = 0;
 	end else begin
 		case (ALU_OP)
 			//and

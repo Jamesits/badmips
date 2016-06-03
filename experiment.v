@@ -25,7 +25,9 @@ module experiment(
     output reg [7:0] LED
     );
 	
-wire [31:0]ALU_OUT, ALU_OF, ALU_ZF;
+wire [31:0]ALU_OUT;
+wire ALU_OF;
+wire ALU_ZF;
 
 CPU c(
 	.RST(RST),
