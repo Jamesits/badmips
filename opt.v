@@ -26,17 +26,20 @@ module opt(
     );
 
 always begin
-	case (func)
-		//add
-		6'b100000: ALU_OP <= 3'b100;
-		6'b100010: ALU_OP <= 3'b101;
-		6'b100100: ALU_OP <= 3'b000;
-		6'b100101: ALU_OP <= 3'b001;
-		6'b100110: ALU_OP <= 3'b010;
-		6'b100111: ALU_OP <= 3'b011;
-		6'b101011: ALU_OP <= 3'b110;
-		6'b000100: ALU_OP <= 3'b111;
-	endcase
+	if (!OP) begin
+	WE <= 1;
+		case (func)
+			//add
+			6'b100000: ALU_OP <= 3'b100;
+			6'b100010: ALU_OP <= 3'b101;
+			6'b100100: ALU_OP <= 3'b000;
+			6'b100101: ALU_OP <= 3'b001;
+			6'b100110: ALU_OP <= 3'b010;
+			6'b100111: ALU_OP <= 3'b011;
+			6'b101011: ALU_OP <= 3'b110;
+			6'b000100: ALU_OP <= 3'b111;
+		endcase
+	end
 end
 
 endmodule
