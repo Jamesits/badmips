@@ -42,9 +42,9 @@ always begin
 		// sub
 		5: begin {OF, F} = A - B; end
 		// slt
-		6: begin F = A < B; OF = 0; end
+		6: begin {OF, F} = A < B; end
 		// sll
-		7: begin F = B << A; OF = 0; end
+		7: begin {OF, F} = B << A; end
 		
 		default: begin F = 0; OF = 0; end
 	endcase
