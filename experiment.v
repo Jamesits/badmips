@@ -1,3 +1,4 @@
+`default_nettype none
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -19,14 +20,14 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module experiment(
-    input RST,
-    input CLK,
-    input [2:0] SEL,
+    input wire RST,
+    input wire CLK,
+    input wire [2:0] SEL,
     output reg [7:0] LED,
-	output [31:0] dbg_inst,
-	output [31:0] dbg_a,
-    output [31:0] dbg_b,
-	output [2:0] dbg_op
+	output wire [31:0] dbg_inst,
+	output wire [31:0] dbg_a,
+    output wire [31:0] dbg_b,
+	output wire [2:0] dbg_op
     );
 	
 wire [31:0]ALU_OUT;

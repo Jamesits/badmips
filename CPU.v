@@ -1,3 +1,4 @@
+`default_nettype none
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -19,15 +20,15 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module CPU(
-    input CLK,
-    input RST,
-	output [31:0]ALU_OUT,
-	output ALU_OF,
-	output ALU_ZF,
-	output [31:0] dbg_inst,
-	output [31:0] dbg_a,
-    output [31:0] dbg_b,
-	output [2:0] dbg_op
+    input wire CLK,
+    input wire RST,
+	output wire [31:0]ALU_OUT,
+	output wire ALU_OF,
+	output wire ALU_ZF,
+	output wire [31:0] dbg_inst,
+	output wire [31:0] dbg_a,
+    output wire [31:0] dbg_b,
+	output wire [2:0] dbg_op
     );
 	
 // IF

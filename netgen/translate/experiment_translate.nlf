@@ -19,4 +19,4 @@ INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx SIMPRIM
    correct compilation and simulation. 
 Number of warnings: 0
 Number of info messages: 1
-Total memory usage is 324200 kilobytes
+Total memory usage is 324204 kilobytes

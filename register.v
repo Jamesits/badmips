@@ -1,3 +1,4 @@
+`default_nettype none
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -19,15 +20,15 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module register(
-    input [4:0] R_Addr_A,
-    input [4:0] R_Addr_B,
-    input [4:0] W_Addr,
-    input [31:0] W_Data,
+    input wire [4:0] R_Addr_A,
+    input wire [4:0] R_Addr_B,
+    input wire [4:0] W_Addr,
+    input wire [31:0] W_Data,
     output reg [31:0] R_Data_A,
     output reg [31:0] R_Data_B,
-    input CLK,
-    input RST,
-    input WE
+    input wire CLK,
+    input wire RST,
+    input wire WE
     );
 
 // register

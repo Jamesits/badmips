@@ -1,3 +1,4 @@
+`default_nettype none
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -19,10 +20,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ALU(
-    input [31:0] A,
-    input [31:0] B,
-    input [2:0] ALU_OP,
-	input RST,
+    input wire [31:0] A,
+    input wire [31:0] B,
+    input wire [2:0] ALU_OP,
+	input wire RST,
     output reg [31:0] F,
     output reg ZF,
     output reg OF

@@ -1,3 +1,4 @@
+`default_nettype none
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -19,8 +20,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module opt(
-    input [5:0] OP,
-    input [5:0] func,
+    input wire [5:0] OP,
+    input wire [5:0] func,
     output reg WE,
     output reg [2:0] ALU_OP
     );
