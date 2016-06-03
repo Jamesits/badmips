@@ -31,23 +31,32 @@ module cpu_test;
 
 	// Outputs
 	wire [7:0] LED;
+	
+	wire [31:0] dbg_inst;
+	wire [31:0] dbg_a, dbg_b;
+	wire [2:0] dbg_op;
 
 	// Instantiate the Unit Under Test (UUT)
 	experiment uut (
 		.RST(RST), 
 		.CLK(CLK), 
 		.SEL(SEL), 
-		.LED(LED)
+		.LED(LED),
+		.dbg_inst(dbg_inst),
+		.dbg_a(dbg_a),
+		.dbg_b(dbg_b),
+		.dbg_op(dbg_op)
 	);
 
 	initial begin
 		// Initialize Inputs
-		RST = 0;
+		RST = 1;
 		CLK = 0;
 		SEL = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
+		RST = 0;
         
 		// Add stimulus here
 		CLK = 1;
@@ -66,7 +75,6 @@ module cpu_test;
 		#100;
 		CLK = 0;
 		#100;
-
 	end
       
 endmodule

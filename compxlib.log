@@ -1,0 +1,40 @@
+    ____  ____
+   /   /\/   /
+  /___/  \  /    VENDOR      : Xilinx Inc.
+  \   \   \/     VERSION     : 14.7 (P.20131013)
+   \   \         APPLICATION : compxlib
+   /   /         CONTENTS    : Compilation Log
+  /___/   /\     FILENAME    : compxlib.log
+  \   \  /  \    
+   \___\/\___\
+
+Processing command line ...
+ERROR:Compxlib:387 - COMPXLIB[option]: Invalid directory '/opt/altera/15.1/modelsim_ase/vsim' specified for -p.
+Library Source Paths => '/opt/Xilinx/14.7/ISE_DS/ISE'
+Current Working Directory => '/home/james/code/FPGA-mips/exp8-r-instruction'
+Compilation Mode = FAST
+Execute Mode = ON
+Scheduling library installation & compilation for architectures: spartan6
+
+Scheduling library installation & compilation for libraries: simprim unisim xilinxcorelib
+
+Signature:-
+------------------------------------------------------------------------------
+compxlib -s mti_se -64bit -p /opt/altera/15.1/modelsim_ase/vsim -l verilog -arch spartan6 -lib all -w -verbose 
+------------------------------------------------------------------------------
+ERROR:Compxlib - COMPXLIB[sim]: Unable to automatically find executables for simulator 'mti_se' from the following paths:
+    /opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64
+   /usr/local/sbin
+   /usr/local/bin
+   /usr/bin
+   /usr/lib/jvm/default/bin
+   /usr/bin/site_perl
+   /usr/bin/vendor_perl
+   /usr/bin/core_perl
+   /opt/altera/15.1/quartus/bin
+   /opt/Xilinx/14.7/ISE_DS/common/bin/lin64
+   /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64
+   /opt/Xilinx/14.7/ISE_DS/EDK/bin/lin64
+   /opt/Xilinx/14.7/ISE_DS/PlanAhead/bin/lin64.
+Simulator 'mti_se' is ignored.
+Generating the compxlib user configuration file - 'compxlib.cfg' ...

@@ -22,7 +22,11 @@ module experiment(
     input RST,
     input CLK,
     input [2:0] SEL,
-    output reg [7:0] LED
+    output reg [7:0] LED,
+	output [31:0] dbg_inst,
+	output [31:0] dbg_a,
+    output [31:0] dbg_b,
+	output [2:0] dbg_op
     );
 	
 wire [31:0]ALU_OUT;
@@ -34,7 +38,11 @@ CPU c(
 	.CLK(CLK),
 	.ALU_OUT(ALU_OUT),
 	.ALU_OF(ALU_OF),
-	.ALU_ZF(ALU_ZF)
+	.ALU_ZF(ALU_ZF),
+	.dbg_inst(dbg_inst),
+	.dbg_a(dbg_a),
+	.dbg_b(dbg_b),
+	.dbg_op(dbg_op)
 );
 
 always begin

@@ -1,0 +1,71 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/james/code/FPGA-mips/exp8-r-instruction/pa.fromNetlist.tcl
+# create_project -name exp8-r-instruction -dir "/home/james/code/FPGA-mips/exp8-r-instruction/planAhead_run_1" -part xc6slx16csg324-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/james/code/FPGA-mips/exp8-r-instruction/experiment.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/james/code/FPGA-mips/exp8-r-instruction} {ipcore_dir} }
+# add_files [list {ipcore_dir/inst_mem.ncf}] -fileset [get_property constrset [current_run]]
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "cpu_board.ucf" [current_fileset -constrset]
+Adding file '/home/james/code/FPGA-mips/exp8-r-instruction/cpu_board.ucf' to fileset 'constrs_1'
+# add_files [list {cpu_board.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx16csg324-3
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design experiment.ngc ...
+WARNING:NetListWriters:298 - No output is written to experiment.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus c/PC[5 : 0] on block experiment is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus c/inst_code[31 : 0] on block experiment
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus c/a/ALU_OP[2]_GND_11_o_wide_mux_9_OUT[31
+   : 0] on block experiment is not reconstructed, because there are some missing
+   bus signals.
+  finished :Prep
+Writing EDIF netlist file experiment.edif ...
+ngc2edif: Total memory usage is 110184 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/exp8-r-instruction.data/cache/experiment_ngc_849b8a7b.edif]
+Finished Parsing EDIF File [./planAhead_run_1/exp8-r-instruction.data/cache/experiment_ngc_849b8a7b.edif]
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design inst_mem.ngc ...
+WARNING:NetListWriters:298 - No output is written to inst_mem.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file inst_mem.edif ...
+ngc2edif: Total memory usage is 103576 kilobytes
+
+Reading core file '/home/james/code/FPGA-mips/exp8-r-instruction/ipcore_dir/inst_mem.ngc' for (cell view 'inst_mem', library 'experiment_lib', file 'experiment.ngc')
+Parsing EDIF File [./planAhead_run_1/exp8-r-instruction.data/cache/inst_mem_ngc_8e363440.edif]
+INFO: [Common 17-344] 'link_design' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Fri Jun  3 19:08:48 2016...
+INFO: [Common 17-83] Releasing license: PlanAhead

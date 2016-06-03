@@ -23,13 +23,17 @@ module CPU(
     input RST,
 	output [31:0]ALU_OUT,
 	output ALU_OF,
-	output ALU_ZF
+	output ALU_ZF,
+	output [31:0] dbg_inst,
+	output [31:0] dbg_a,
+    output [31:0] dbg_b,
+	output [2:0] dbg_op
     );
 	
 // IF
 reg [31:0] PC; // only last 8 bits are used
 
-always @(posedge CLK or posedge RST)
+always @(negedge CLK or posedge RST)
 begin
 	if (RST) PC <= 0;
 	else begin
@@ -39,6 +43,8 @@ end
 
 wire [31:0]inst_code;
 wire [7:0] inst_addr;
+
+assign dbg_inst = inst_code;
 
 assign inst_addr = PC[7:0];
 
@@ -71,7 +77,7 @@ register r(
 	.R_Data_A(alu_input[0]),
 	.R_Data_B(alu_input[1]),
 	.W_Data(alu_output),
-	.CLK(CLK),
+	.CLK(~CLK),
 	.RST(RST),
 	.WE(reg_write_enable)
 );
@@ -101,5 +107,9 @@ ALU a(
 assign ALU_OUT = alu_output;
 assign ALU_OF = alu_of;
 assign ALU_ZF = alu_zf;
+
+assign dbg_a = alu_input[0];
+assign dbg_b = alu_input[1];
+assign dbg_op = alu_op;
 
 endmodule

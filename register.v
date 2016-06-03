@@ -41,10 +41,8 @@ begin
 			r[i] <= 0;
 	end else begin
 		if (WE && W_Addr) r[W_Addr] <= W_Data;
-		else begin
-			R_Data_A <= r[R_Addr_A];
-			R_Data_B <= r[R_Addr_B];
-		end
+		R_Data_A <= r[R_Addr_A];
+		R_Data_B <= r[R_Addr_B];
 	end
 end
 

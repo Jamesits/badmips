@@ -1,0 +1,236 @@
+# do {cpu_test.fdo}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:48:33 on Jun 03,2016
+# vlog -reportprogress 300 register.v 
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# End time: 19:48:33 on Jun 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:48:33 on Jun 03,2016
+# vlog -reportprogress 300 opt.v 
+# -- Compiling module opt
+# 
+# Top level modules:
+# 	opt
+# End time: 19:48:33 on Jun 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:48:33 on Jun 03,2016
+# vlog -reportprogress 300 ipcore_dir/inst_mem.v 
+# -- Compiling module inst_mem
+# 
+# Top level modules:
+# 	inst_mem
+# End time: 19:48:33 on Jun 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:48:34 on Jun 03,2016
+# vlog -reportprogress 300 ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 19:48:34 on Jun 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:48:34 on Jun 03,2016
+# vlog -reportprogress 300 CPU.v 
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# End time: 19:48:34 on Jun 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:48:34 on Jun 03,2016
+# vlog -reportprogress 300 experiment.v 
+# -- Compiling module experiment
+# 
+# Top level modules:
+# 	experiment
+# End time: 19:48:34 on Jun 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:48:34 on Jun 03,2016
+# vlog -reportprogress 300 cpu_test.v 
+# -- Compiling module cpu_test
+# 
+# Top level modules:
+# 	cpu_test
+# End time: 19:48:34 on Jun 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 19:48:34 on Jun 03,2016
+# vlog -reportprogress 300 /opt/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 19:48:34 on Jun 03,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work work.cpu_test glbl 
+# Start time: 19:48:34 on Jun 03,2016
+# Loading work.cpu_test
+# ** Error: (vsim-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+# Loading work.experiment
+# ** Error: (vsim-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+# Loading work.CPU
+# ** Error: (vsim-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+# Loading work.inst_mem
+# ** Error: (vsim-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) ipcore_dir/inst_mem.v(118): Instantiation of 'BLK_MEM_GEN_V7_3' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_test/uut/c/i File: ipcore_dir/inst_mem.v
+#         Searched libraries:
+# ** Error: (vsim-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+#             /home/james/code/FPGA-mips/exp8-r-instruction/work
+# ** Error: (vsim-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+# Loading work.register
+# ** Error: (vsim-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+# Loading work.opt
+# ** Error: (vsim-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'secureip' at "secureip".
+# No such file or directory. (errno = ENOENT)
+# Loading work.ALU
+# Loading work.glbl
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./cpu_test.fdo PAUSED at line 34
+vsim work.cpu_test
+# vsim work.cpu_test 
+# Start time: 19:48:34 on Jun 03,2016
+# Loading work.cpu_test
+# Loading work.experiment
+# Loading work.CPU
+# Loading work.inst_mem
+# ** Error: (vsim-3033) ipcore_dir/inst_mem.v(118): Instantiation of 'BLK_MEM_GEN_V7_3' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_test/uut/c/i File: ipcore_dir/inst_mem.v
+#         Searched libraries:
+#             /home/james/code/FPGA-mips/exp8-r-instruction/work
+# Loading work.register
+# Loading work.opt
+# Loading work.ALU
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./cpu_test.fdo PAUSED at line 34
+vsim work.cpu_test
+# vsim work.cpu_test 
+# Start time: 19:48:34 on Jun 03,2016
+# Loading work.cpu_test
+# Loading work.experiment
+# Loading work.CPU
+# Loading work.inst_mem
+# ** Error: (vsim-3033) ipcore_dir/inst_mem.v(118): Instantiation of 'BLK_MEM_GEN_V7_3' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_test/uut/c/i File: ipcore_dir/inst_mem.v
+#         Searched libraries:
+#             /home/james/code/FPGA-mips/exp8-r-instruction/work
+# Loading work.register
+# Loading work.opt
+# Loading work.ALU
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./cpu_test.fdo PAUSED at line 34
+vsim work.cpu_test
+# vsim work.cpu_test 
+# Start time: 19:48:34 on Jun 03,2016
+# Loading work.cpu_test
+# Loading work.experiment
+# Loading work.CPU
+# Loading work.inst_mem
+# ** Error: (vsim-3033) ipcore_dir/inst_mem.v(118): Instantiation of 'BLK_MEM_GEN_V7_3' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_test/uut/c/i File: ipcore_dir/inst_mem.v
+#         Searched libraries:
+#             /home/james/code/FPGA-mips/exp8-r-instruction/work
+# Loading work.register
+# Loading work.opt
+# Loading work.ALU
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./cpu_test.fdo PAUSED at line 34
+vsim work.ALU
+# vsim work.ALU 
+# Start time: 19:48:34 on Jun 03,2016
+# Loading work.ALU
+add wave -position insertpoint  \
+sim:/ALU/A \
+sim:/ALU/B \
+sim:/ALU/ALU_OP \
+sim:/ALU/RST \
+sim:/ALU/F \
+sim:/ALU/ZF \
+sim:/ALU/OF
+force -freeze sim:/ALU/RST 0 0
+force -freeze sim:/ALU/ALU_OP 100 0
+force -freeze sim:/ALU/A 8'd10 0
+force -freeze sim:/ALU/B 8 0
+# Invalid binary digit: 8.
+# ** Error: (vsim-4011) Invalid force value: 8 0.
+# 
+force -freeze sim:/ALU/B 8'd35 0
+run
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# A time value could not be extracted from the current line
+# Break key hit
+# Break in Module ALU at ALU.v line 57
+# End time: 19:50:56 on Jun 03,2016, Elapsed time: 0:02:22
+# Errors: 37, Warnings: 1

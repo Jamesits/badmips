@@ -1,0 +1,164 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/james/code/FPGA-mips/exp8-r-instruction
+vALU
+Z1 !s110 1464954514
+!i10b 1
+!s100 XRiQIV68GJ9Z389b>8Kh]1
+I4^c_HIXgG870UM13TPdXS0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1464950233
+8ALU.v
+FALU.v
+Z3 L0 21
+Z4 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z5 !s108 1464954514.000000
+!s107 ALU.v|
+!s90 -reportprogress|300|ALU.v|
+!i113 1
+n@a@l@u
+vCPU
+R1
+!i10b 1
+!s100 jk7Po`gg_Zg6iD<:36MSb1
+IblSPbM4QH;BE:ehbH9RKM3
+R2
+R0
+w1464954058
+8CPU.v
+FCPU.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 CPU.v|
+!s90 -reportprogress|300|CPU.v|
+!i113 1
+n@c@p@u
+vcpu_test
+R1
+!i10b 1
+!s100 HW4fzdb<hER_`Q6JzT5^d1
+I8?:OXC<_8ce0jH1V7]DXa1
+R2
+R0
+w1464951690
+8cpu_test.v
+Fcpu_test.v
+L0 25
+R4
+r1
+!s85 0
+31
+R5
+!s107 cpu_test.v|
+!s90 -reportprogress|300|cpu_test.v|
+!i113 1
+vexperiment
+R1
+!i10b 1
+!s100 `QUcCCP@>QBJdH39[DLj72
+I<jSl[T9[?hcV31AlH0XmX0
+R2
+R0
+w1464950174
+8experiment.v
+Fexperiment.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 experiment.v|
+!s90 -reportprogress|300|experiment.v|
+!i113 1
+vglbl
+R1
+!i10b 1
+!s100 UlJ]9LUWO:ZWoRO62F9fW3
+I6<]ZeQFX_NlBn_C];GgNT0
+R2
+R0
+w1381681120
+8/opt/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+F/opt/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+!s107 /opt/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!s90 -reportprogress|300|/opt/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!i113 1
+vinst_mem
+Z6 !s110 1464954513
+!i10b 1
+!s100 ]XRD1bCJ8RXA`?JSSaGnh3
+IJB2^o3lb==l3Oh^16TeF_2
+R2
+R0
+w1464947880
+8ipcore_dir/inst_mem.v
+Fipcore_dir/inst_mem.v
+L0 39
+R4
+r1
+!s85 0
+31
+Z7 !s108 1464954513.000000
+!s107 ipcore_dir/inst_mem.v|
+!s90 -reportprogress|300|ipcore_dir/inst_mem.v|
+!i113 1
+vopt
+R6
+!i10b 1
+!s100 V@Q@FX585S[?igfM<bU382
+I?cLF0DlegOBKaGJD?N8WE0
+R2
+R0
+w1464949743
+8opt.v
+Fopt.v
+R3
+R4
+r1
+!s85 0
+31
+R7
+!s107 opt.v|
+!s90 -reportprogress|300|opt.v|
+!i113 1
+vregister
+R6
+!i10b 1
+!s100 ?4hc]^P_o<fMRQ>1Pm5^Z3
+InHBH[1BQT@2A=mXRC8gWS0
+R2
+R0
+w1464946021
+8register.v
+Fregister.v
+R3
+R4
+r1
+!s85 0
+31
+R7
+!s107 register.v|
+!s90 -reportprogress|300|register.v|
+!i113 1

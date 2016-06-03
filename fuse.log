@@ -1,38 +1,64 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/james/code/FPGA-mips/exp8-r-instruction/cpu_test_isim_beh.exe -prj /home/james/code/FPGA-mips/exp8-r-instruction/cpu_test_beh.prj work.cpu_test work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib simprims_ver -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/james/code/FPGA-mips/exp8-r-instruction/cpu_test_isim_translate.exe -prj /home/james/code/FPGA-mips/exp8-r-instruction/cpu_test_translate.prj work.cpu_test work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/james/code/FPGA-mips/exp8-r-instruction/register.v" into library work
-Analyzing Verilog file "/home/james/code/FPGA-mips/exp8-r-instruction/opt.v" into library work
-Analyzing Verilog file "/home/james/code/FPGA-mips/exp8-r-instruction/ipcore_dir/inst_mem.v" into library work
-Analyzing Verilog file "/home/james/code/FPGA-mips/exp8-r-instruction/ALU.v" into library work
-Analyzing Verilog file "/home/james/code/FPGA-mips/exp8-r-instruction/CPU.v" into library work
-Analyzing Verilog file "/home/james/code/FPGA-mips/exp8-r-instruction/experiment.v" into library work
+Analyzing Verilog file "/home/james/code/FPGA-mips/exp8-r-instruction/netgen/translate/experiment_translate.v" into library work
 Analyzing Verilog file "/home/james/code/FPGA-mips/exp8-r-instruction/cpu_test.v" into library work
-Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "/home/james/code/FPGA-mips/exp8-r-instruction/CPU.v" Line 45: Port wea is not connected to this instance
-WARNING:HDLCompiler:189 - "/home/james/code/FPGA-mips/exp8-r-instruction/CPU.v" Line 46: Size mismatch in connection of port <addra>. Formal port size is 6-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1573: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1577: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1660: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1664: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1721: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1722: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1773: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1774: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1869: Element index 23 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1870: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1875: Element index 31 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1876: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1979: Element index 23 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1980: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1985: Element index 31 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1986: Element index 3 into memp is out of bounds
 Completed static elaboration
-Fuse Memory Usage: 95812 KB
-Fuse CPU Usage: 4100 ms
-Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
-Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
-Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
-Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
-Compiling module inst_mem
-Compiling module register
-Compiling module opt
-Compiling module ALU
-Compiling module CPU
+Fuse Memory Usage: 109668 KB
+Fuse CPU Usage: 4980 ms
+Compiling module X_ONE
+Compiling module X_ZERO
+Compiling module latchsre
+Compiling module X_LATCHE
+Compiling module ffsrce
+Compiling module X_FF
+Compiling module mux
+Compiling module X_MUX2
+Compiling module X_XOR2
+Compiling module X_LUT6(INIT=64'b1111000011110000...
+Compiling module x_lut2_mux4
+Compiling module X_LUT2(INIT=4'b1001)
+Compiling module X_LUT4(INIT=16'b1001000000001001...
+Compiling module X_LUT5(INIT=32'b0100000000000000...
+Compiling module x_lut3_mux4
+Compiling module X_LUT3(INIT=8'b11100100)
+Compiling module X_BUF
+Compiling module X_CKBUF
+Compiling module X_INV
+Compiling module X_IPAD
+Compiling module X_OPAD
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1400: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1404: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1486: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "/build/xfndry10/P.20131013/rtf/verilog/src/simprims/X_RAMB8BWER.v" Line 1490: Element index 3 into memp is out of bounds
+Compiling module X_RAMB8BWER(DATA_WIDTH_A=18,DATA...
+Compiling module X_OBUF
 Compiling module experiment
 Compiling module cpu_test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 5 sub-compilation(s) to finish...
-Compiled 12 Verilog Units
-Built simulation executable /home/james/code/FPGA-mips/exp8-r-instruction/cpu_test_isim_beh.exe
-Fuse Memory Usage: 659336 KB
-Fuse CPU Usage: 4270 ms
-GCC CPU Usage: 3970 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 104 Verilog Units
+Built simulation executable /home/james/code/FPGA-mips/exp8-r-instruction/cpu_test_isim_translate.exe
+Fuse Memory Usage: 694792 KB
+Fuse CPU Usage: 6850 ms
+GCC CPU Usage: 21430 ms

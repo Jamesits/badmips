@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Fri Jun  3 19:07:50 2016
+# Process ID: 2611
+# Log file: /home/james/code/FPGA-mips/exp8-r-instruction/planAhead_run_1/planAhead.log
+# Journal file: /home/james/code/FPGA-mips/exp8-r-instruction/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/james/code/FPGA-mips/exp8-r-instruction/pa.fromNetlist.tcl

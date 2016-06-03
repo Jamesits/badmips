@@ -1,0 +1,22 @@
+Release 14.7 - netgen P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -filter
+/home/james/code/FPGA-mips/exp8-r-instruction/iseconfig/filter.filter -intstyle
+ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim experiment.ngd
+experiment_translate.v  
+
+Reading design 'experiment.ngd' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog netlist file
+'/home/james/code/FPGA-mips/exp8-r-instruction/netgen/translate/experiment_trans
+late.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx SIMPRIM
+   simulation primitives and has to be used with SIMPRIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 324200 kilobytes

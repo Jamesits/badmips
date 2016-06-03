@@ -48,7 +48,7 @@ always begin
 			// sub
 			5: begin {OF, F} = A - B; end
 			// slt
-			6: begin {OF, F} = A < B; end
+			6: begin F = A < B; OF = 0; end
 			// sll
 			7: begin {OF, F} = B << A; end
 			
