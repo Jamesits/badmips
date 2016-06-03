@@ -67,29 +67,29 @@ module cpu_test;
 		// Add stimulus here
 		for (i = 0; i < 35; i = i + 1) begin
 			CLK = 1;
-			#10;
+			#100;
 			CLK = 0;
-			#10;
+			#100;
 		end
 		RST = 1;
-		#10;
+		#100;
 		RST = 0;
-		#10;
+		#100;
 		for (i = 0; i < 5; i = i + 1) begin
 			CLK = 1;
-			#10;
+			#100;
 			CLK = 0;
-			#10;
+			#100;
 		end
 		RST = 1;
-		#10;
+		#100;
 		RST = 0;
-		#10;
+		#100;
 		for (i = 0; i < 12; i = i + 1) begin
 			CLK = 1;
-			#10;
+			#100;
 			CLK = 0;
-			#10;
+			#100;
 		end
 	end
 endmodule
