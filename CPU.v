@@ -20,7 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 module CPU(
     input CLK,
-    input RST
+    input RST,
+	output [31:0]ALU_OUT,
+	output ALU_OF,
+	output ALU_ZF
     );
 	
 // IF
@@ -75,6 +78,7 @@ register r(
 
 // EX & MEM
 wire [2:0]alu_op;
+wire alu_of, alu_zf;
 
 opt o(
 	.OP(op),
@@ -87,7 +91,15 @@ ALU a(
 	.ALU_OP(alu_op),
 	.A(alu_input[0]),
 	.B(alu_input[1]),
-	.F(alu_output)
+	.F(alu_output),
+	.OF(alu_of),
+	.ZF(alu_zf),
+	.RST(RST)
 );
+
+// output
+assign ALU_OUT = alu_output;
+assign ALU_OF = alu_of;
+assign ALU_ZF = alu_zf;
 
 endmodule
