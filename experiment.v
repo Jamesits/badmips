@@ -44,8 +44,8 @@ always begin
 			3: LED <= ALU_OUT[31:24];
 		endcase
 	end else begin
-		LED[0] = ALU_ZF;
-		LED[1] = ALU_OF;
+		LED[0] <= ALU_ZF;
+		LED[1] <= ALU_OF;
 	end
 end
 
