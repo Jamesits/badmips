@@ -36,6 +36,8 @@ module cpu_test;
 	wire [31:0] dbg_inst;
 	wire [31:0] dbg_a, dbg_b;
 	wire [2:0] dbg_op;
+	wire dbg_we;
+	wire [31:0] alu_output;
 
 	// Instantiate the Unit Under Test (UUT)
 	experiment uut (
@@ -46,7 +48,9 @@ module cpu_test;
 		.dbg_inst(dbg_inst),
 		.dbg_a(dbg_a),
 		.dbg_b(dbg_b),
-		.dbg_op(dbg_op)
+		.dbg_op(dbg_op),
+		.dbg_we(dbg_we),
+		.alu_output(alu_output)
 	);
 
 	initial begin

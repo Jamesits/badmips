@@ -28,7 +28,9 @@ module CPU(
 	output wire [31:0] dbg_inst,
 	output wire [31:0] dbg_a,
     output wire [31:0] dbg_b,
-	output wire [2:0] dbg_op
+	output wire [2:0] dbg_op,
+	output wire reg_write_enable,
+	output wire [31:0]alu_output
     );
 	
 // IF
@@ -58,20 +60,15 @@ inst_mem i(
 );
 
 // ID
-wire [5:0]op;
-wire [4:0]rs;
-wire [4:0]rt;
-wire [4:0]rd;
-wire [5:0]func;
+wire [5:0]op = inst_code[31:26];
+wire [4:0]rs = inst_code[25:21];
+wire [4:0]rt = inst_code[20:16];
+wire [4:0]rd = inst_code[15:11];
+wire [5:0]shamt = inst_code[10:6];
+wire [5:0]func = inst_code[5:0];
 wire [31:0]alu_input_A, alu_input_B;
-wire [31:0]alu_output;
-wire reg_write_enable;
-
-assign op = inst_code[31:26];
-assign rs = inst_code[25:21];
-assign rt = inst_code[20:16];
-assign rd = inst_code[15:11];
-assign func = inst_code[5:0];
+//wire [31:0]alu_output;
+//wire reg_write_enable;
 
 register r(
 	.R_Addr_A(rs),

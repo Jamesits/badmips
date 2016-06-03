@@ -3024,3 +3024,12 @@ extern void simprims_ver_m_05548409876658398341_2911212504_init()
 	xsi_register_executes(pe);
 	xsi_register_subprogram_executes(se);
 }
+
+extern void simprims_ver_m_05548409876658398341_1231594888_init()
+{
+	static char *pe[] = {(void *)Gate_38_0,(void *)Gate_39_1,(void *)Gate_40_2,(void *)Gate_41_3,(void *)Gate_43_4,(void *)Cont_45_5,(void *)Always_47_6};
+	static char *se[] = {(void *)sp_lut4_mux4};
+	xsi_register_didat("simprims_ver_m_05548409876658398341_1231594888", "isim/cpu_test_isim_translate.exe.sim/simprims_ver/m_05548409876658398341_1231594888.didat");
+	xsi_register_executes(pe);
+	xsi_register_subprogram_executes(se);
+}

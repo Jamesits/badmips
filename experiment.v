@@ -27,7 +27,9 @@ module experiment(
 	output wire [31:0] dbg_inst,
 	output wire [31:0] dbg_a,
     output wire [31:0] dbg_b,
-	output wire [2:0] dbg_op
+	output wire [2:0] dbg_op,
+	output wire dbg_we,
+	output wire [31:0]alu_output
     );
 	
 wire [31:0]ALU_OUT;
@@ -43,7 +45,9 @@ CPU c(
 	.dbg_inst(dbg_inst),
 	.dbg_a(dbg_a),
 	.dbg_b(dbg_b),
-	.dbg_op(dbg_op)
+	.dbg_op(dbg_op),
+	.reg_write_enable(dbg_we),
+	.alu_output(alu_output)
 );
 
 always begin

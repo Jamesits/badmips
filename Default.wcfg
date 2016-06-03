@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/james/code/FPGA-mips/exp8-r-instruction/cpu_test_isim_translate.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="cpu_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/cpu_test/LED" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LED[7:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_test/dbg_inst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dbg_inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_inst[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_test/dbg_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dbg_a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_a[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_test/dbg_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dbg_b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_b[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_test/dbg_op" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dbg_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_test/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_test/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_test/SEL" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SEL[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SEL[2:0]</obj_property>
+   </wvobject>
+</wave_config>

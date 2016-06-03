@@ -7685,11 +7685,11 @@ extern void simprims_ver_m_07469524036140029493_2139466549_init()
 	xsi_register_subprogram_executes(se);
 }
 
-extern void simprims_ver_m_07469524036140029493_3925352317_init()
+extern void simprims_ver_m_07469524036140029493_2003395961_init()
 {
 	static char *pe[] = {(void *)Gate_36_0,(void *)Gate_37_1,(void *)Gate_38_2,(void *)Gate_39_3,(void *)Gate_40_4,(void *)Gate_41_5,(void *)Cont_46_6,(void *)Always_48_7};
 	static char *se[] = {(void *)sp_lut6_mux8,(void *)sp_lut4_mux4};
-	xsi_register_didat("simprims_ver_m_07469524036140029493_3925352317", "isim/cpu_test_isim_translate.exe.sim/simprims_ver/m_07469524036140029493_3925352317.didat");
+	xsi_register_didat("simprims_ver_m_07469524036140029493_2003395961", "isim/cpu_test_isim_translate.exe.sim/simprims_ver/m_07469524036140029493_2003395961.didat");
 	xsi_register_executes(pe);
 	xsi_register_subprogram_executes(se);
 }
@@ -7703,11 +7703,11 @@ extern void simprims_ver_m_07469524036140029493_1245443259_init()
 	xsi_register_subprogram_executes(se);
 }
 
-extern void simprims_ver_m_07469524036140029493_3957969425_init()
+extern void simprims_ver_m_07469524036140029493_3945006841_init()
 {
 	static char *pe[] = {(void *)Gate_36_0,(void *)Gate_37_1,(void *)Gate_38_2,(void *)Gate_39_3,(void *)Gate_40_4,(void *)Gate_41_5,(void *)Cont_46_6,(void *)Always_48_7};
 	static char *se[] = {(void *)sp_lut6_mux8,(void *)sp_lut4_mux4};
-	xsi_register_didat("simprims_ver_m_07469524036140029493_3957969425", "isim/cpu_test_isim_translate.exe.sim/simprims_ver/m_07469524036140029493_3957969425.didat");
+	xsi_register_didat("simprims_ver_m_07469524036140029493_3945006841", "isim/cpu_test_isim_translate.exe.sim/simprims_ver/m_07469524036140029493_3945006841.didat");
 	xsi_register_executes(pe);
 	xsi_register_subprogram_executes(se);
 }
@@ -7789,15 +7789,6 @@ extern void simprims_ver_m_07469524036140029493_4091486751_init()
 	static char *pe[] = {(void *)Gate_36_0,(void *)Gate_37_1,(void *)Gate_38_2,(void *)Gate_39_3,(void *)Gate_40_4,(void *)Gate_41_5,(void *)Cont_46_6,(void *)Always_48_7};
 	static char *se[] = {(void *)sp_lut6_mux8,(void *)sp_lut4_mux4};
 	xsi_register_didat("simprims_ver_m_07469524036140029493_4091486751", "isim/cpu_test_isim_translate.exe.sim/simprims_ver/m_07469524036140029493_4091486751.didat");
-	xsi_register_executes(pe);
-	xsi_register_subprogram_executes(se);
-}
-
-extern void simprims_ver_m_07469524036140029493_3428618695_init()
-{
-	static char *pe[] = {(void *)Gate_36_0,(void *)Gate_37_1,(void *)Gate_38_2,(void *)Gate_39_3,(void *)Gate_40_4,(void *)Gate_41_5,(void *)Cont_46_6,(void *)Always_48_7};
-	static char *se[] = {(void *)sp_lut6_mux8,(void *)sp_lut4_mux4};
-	xsi_register_didat("simprims_ver_m_07469524036140029493_3428618695", "isim/cpu_test_isim_translate.exe.sim/simprims_ver/m_07469524036140029493_3428618695.didat");
 	xsi_register_executes(pe);
 	xsi_register_subprogram_executes(se);
 }
