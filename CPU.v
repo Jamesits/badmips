@@ -34,7 +34,7 @@ module CPU(
     );
 	
 // IF
-reg [31:0] PC; // only last 8 bits are used
+reg [31:0] PC; // only [6:2] are used
 
 initial PC = 0;
 
